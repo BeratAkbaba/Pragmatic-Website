@@ -1,0 +1,193 @@
+.sidebars{
+  /* background-color: rgb(183, 183, 183);  */
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  font-size: 14px;
+  height: 100vh; /* Tam ekran yüksekliği */
+}
+.one{
+  width: 190px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  text-shadow: -1px 0px 1px #f3f7fa, 0px 0px 1px #f3f7fa, 0px 0px 1px #f3f7fa, 0px 0px 1px #f3f7fa, 0px 0px 1px #f3f7fa, 0px 0px 1px #f3f7fa, 0px 0px 1px #f3f7fa, 0px 1px 2px rgba(0, 0, 0, .3), 0px 3px 9px rgba(0, 0, 0, .1);;
+}
+.one img{
+  width: 30px;
+  margin-right: 10px;
+}
+.one .p{
+  font-weight: 500;
+  font-size: 20px;
+}
+.second{
+  flex: 1;
+  padding: 10px 0 20px 0;
+  overflow-x: hidden;
+  overflow-y: auto; /* Sadece ikinci div için dikey kaydırma */
+}
+.second:hover::-webkit-scrollbar-thumb{
+  background: rgb(204, 204, 204);
+}
+.title{
+  font-size: 12px;
+  color: #4a596a59;
+  padding: 4px 0px 0 20px;
+  padding-top: 10px;
+}
+.title:first-child{
+  font-size: 12px;
+  color: #4a596a59;
+  padding: 4px 0px 0 20px;
+}
+.title-collapsed{
+  font-size: 12px;
+  color: #909399;
+  text-align: center;
+  margin-right: 15px;
+}
+.ItemTitle{
+  padding: 0 44px 0 22px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  font-size: 18px;
+  transition: height 0.8s ease;
+}
+.ItemTitle-collapsed:hover{
+  background-color: #e9e9e9;
+}
+.ItemTitle-collapsed{
+  padding: 0 44px 0 22px;
+  display: flex;
+  align-items: center;
+  height: 58px;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  font-size: 18px;
+}
+
+.ItemTitle .icon{
+  margin-right: 5px;
+}
+.ItemTitle span{
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+.ItemTitle .el-icon svg{
+  width: 12px;
+  position: absolute;
+  left: 200px;
+  top: 12px;
+  color: #444;
+  transition: transform 0.3s ease;
+}
+.el-icon svg.rotated {
+  transform: rotate(180deg);
+}
+
+
+.ItemTitle span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: width 0.3s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 0.15s;
+  opacity: 0;
+}
+.ItemTitle .border::after {
+  height: 2px;
+}
+
+.ItemTitle:hover span::after {
+  width: 100px;
+  opacity: 1;
+}
+
+.titleChildren {
+  list-style-type: none;
+  border-left: 2px solid black;
+  line-height: 40px;
+  margin:0 0 0 25px;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 5px;
+
+}
+.titleChildren li{
+  display: block;
+  padding-left: 5px;
+}
+
+/* Scrollbar stilini tanımlama */
+.second::-webkit-scrollbar {
+  width: 6px; /* Scrollbar genişliği */
+}
+
+.second::-webkit-scrollbar-thumb {
+  background: rgba(204, 204, 204, 0); /* Thumb (kaydırıcı) rengi */
+  border-radius: 6px; /* Thumb köşe yuvarlama */
+}
+
+.second::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* Hover durumu için thumb rengi */
+}
+
+
+/* Collapse Button */
+
+.collapse{
+  display: inline-block;
+  flex-direction: column;
+  color: #5f8fdf;
+  background-color: #dfe8f9;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  margin-left: 20px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  visibility: visible;
+}
+
+.collapse i{
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.cocuklu{
+  position: relative;
+}
+.cocuklu .el-icon svg{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: #4a596a;
+  width: 12px;
+  transition: transform 0.3s ease;
+}
+.cocuklu1{
+  position: relative;
+}
+.cocuklu1 .el-icon svg{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: #4a596a;
+  width: 12px;
+  transition: transform 0.3s ease;
+}

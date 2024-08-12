@@ -1,0 +1,241 @@
+.long-box{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px;
+  width: 100%;
+  
+}
+
+.long-box-up{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.long-box-up-under{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.long-box-down{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-x: auto;
+}
+.long-box-up-left{
+  color: rgb(73, 89, 105);
+  display: flex;
+  flex-direction: column;
+}
+.long-box-up-left h2{
+  margin: 0 ;
+  font-weight: 500;
+  font-size: 24px;
+}
+.long-box-up-left h4{
+  margin: 5px 20px 0 0;
+  flex: 1;
+  color: #aaa;
+}
+.long-box-up-right{
+  color: rgb(73, 89, 105);
+  font-size: 14px;
+}
+.radio-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(128, 128, 128, 0.4);
+  border-radius: 5px;
+}
+
+.radio-button-label {
+  position: relative;
+  display: flex;
+}
+
+.radio-button-label:hover .radio-button-span {
+  color: #4a90e2;
+}
+
+.radio-button {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-button-span {
+  position: relative;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: color 0.6s ease;
+}
+
+.selected .radio-0{
+  background-color: #4a90e2;
+  color: white;
+  transition: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.selected .radio-1{
+  background-color: #4a90e2;
+  color: white;
+  transition: none;
+}
+
+.selected .radio-2{
+  background-color: #4a90e2;
+  color: white;
+  transition: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.selected:hover .radio-button-span {
+  color: white;
+}
+
+/* tablo */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap; /* To prevent line breaks */
+  padding-bottom: 20px;
+}
+th, td {
+  border: none;
+  padding: 12px 20px;
+  text-align: left;
+}
+tr:nth-child(odd){
+  background-color: rgb(248, 248, 248);
+}
+.td-left span{
+  margin: 0 0 0 10px;
+}
+.svg-peity{
+  display: flex;
+  flex-direction: row; 
+}
+.peity {
+  flex: 1;
+  margin: 5px;
+}
+th {
+  color: #4a594a6a;
+  font-size: 16px;
+}
+td {
+  color: rgb(73, 89, 105);
+}
+.bar-and-svg{
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  align-items: center;
+  min-width: 195px;
+}
+
+.el-progress-bar__inner {
+  width: 0%;
+  height: 100%;
+  height: 6px;
+  border-radius: 5px;
+}
+.el-progress-bar{
+  border-radius: 5px;
+  background-color: #ddd;
+  margin-right: 5px;
+  font-size: 14.4px;
+}
+.el-icon svg{
+  width: 16px;
+  color: #67c23a;
+}
+
+/* Scrollbar stilini tanımlama */
+.long-box-down::-webkit-scrollbar {
+  height: 0px; 
+}
+
+.box-7 img, .box-5 img{
+  width: 100%; 
+  height: 410px;
+  border-radius: 3px;
+}
+
+/* animation */
+.td-left {
+  position: relative;
+}
+
+.td-left span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1; /* Topun dalganın üzerinde görünmesi için */
+  animation: pulse 2s infinite; /* Nefes alıp verme animasyonu */
+}
+
+.td-left span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.5; /* Dalganın başlangıç şeffaflığı */
+  animation: pulse-wave 2s infinite; /* Dalga yayılma animasyonu */
+  z-index: 0; /* Dalganın topun altında olması için */
+  background-color: var(--after-bg-color);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-wave {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5); /* Dalganın büyüme oranı */
+    opacity: 0; /* Dalganın büyürken kaybolması */
+  }
+}
+/* finish animation */
+
+
+/* box 6 ve 7 responsive */
+.box-6, .box-7 {
+  min-width: 100px; /* Çok daralmasını engeller */
+}
+
+@media (max-width: 1200px) {
+  .box-7 {
+    flex: 1 1 12.5%; /* Varsayılan genişliğin %25 fazlasını ayarlar */
+  }
+
+}
+@media (max-width: 1040px){
+  .long-box-up-right {
+    display: none; /* .right-progress-box divini gizler */
+  }
+}
+@media (max-width: 990px) {
+  .box-6,
+  .box-7 {
+    flex: 1; /* Her iki kutunun genişliğini eşit yapar */
+  }
+}
+/* finish responsive */

@@ -1,0 +1,97 @@
+.small-box {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px;
+}
+.up{
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  /* height: 75px; */
+}
+.down{
+  flex: 1;
+}
+.down svg {
+   margin: 0px 0px -0.5px 0; 
+   border-radius: 5px;
+}
+.small-box .left{
+  flex: 1;
+  margin: 0 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, .02);
+  border: 1px solid rgba(0, 0, 0, .02);
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+.small-box .right{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.box-1 .small-box .left i,
+.box-2 .small-box .left i{
+  flex: 1;
+  font-size: 30px;
+  color: #5f8fdf;
+}
+.box-3 .small-box .left i,
+.box-4 .small-box .left i{
+  flex: 1;
+  font-size: 30px;
+  color: #67c23a;
+}
+.small-box .left .badge{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box-1 .small-box .badge i,
+.box-2 .small-box .badge i {
+  font-size: 12.8px;
+  color: #67c23a;
+}
+.box-3 .small-box .badge i,
+.box-4 .small-box .badge i {
+  font-size: 12.8px;
+  color: #909399;
+}
+
+.box-1 .small-box .badge strong,
+.box-2 .small-box .badge strong{
+  font-size: 12.8px;
+  color: #5f8fdf;
+}
+.box-3 .small-box .badge strong,
+.box-4 .small-box .badge strong{
+  font-size: 12.8px;
+  color: #67c23a;
+}
+
+.small-box .right-up{
+  flex: 1px;
+  padding: 5px 0 0;
+}
+
+.right-up {
+  color: #4a596a;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.right-down {
+  color: #4a596a;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+

@@ -1,0 +1,49 @@
+.xlong-box{
+  width: 100%;
+  padding: 20px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.long-box-down h4{
+  font-weight: 500;
+  margin-top: 21.28px;
+}
+.long-box-down h4:first-child{
+  margin: 0;
+}
+.xlong-box-up{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.xlong-box h4{
+  margin: 5px 20px 20px 0;
+  color: #aaa;
+}
+.xlong-box-up-left h2{
+  margin: 0 ;
+  font-weight: 500;
+  font-size: 24px;
+}
+.bar-and-svg1{
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  align-items: center;
+}
+.xlong-box-down h5{
+  margin: 21.28px 0 0 0;
+  font-weight: 500;
+}
+/* --------- */
+.long-box-down{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.el-radio-button:hover{
+  color: #5f8fdf;
+}
+
+.icon-2 svg{
+  color: #f56c6c;
+}
